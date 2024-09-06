@@ -1,0 +1,85 @@
+/* General reset and layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container for the page content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for the Home button */
+.back-button {
+    display: inline-block;
+    margin: 20px 0; /* Add margin to position it neatly */
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: relative;
+    align-self: flex-start; /* Keep button at the top */
+}
+
+/* Ensure the images are uniform in size */
+.meal img {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 8px;
+}
+
+/* Flexbox layout for the meal gallery */
+.meal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Flexbox for meal items to center the content */
+.meal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure smaller screens have a one-column layout */
+@media (max-width: 768px) {
+    .meal {
+        flex: 1 1 100%;
+    }
+}
+
+/* General text styling */
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
